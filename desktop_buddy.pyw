@@ -18,6 +18,8 @@ grabbed = [PhotoImage(file=fileurl+"grabbed.gif",format = 'gif -index %i' %(i)) 
 falling = [PhotoImage(file=fileurl+"falling.gif",format = 'gif -index %i' %(i)) for i in range(3)]
 tb = [idle, walking_left,sleep, walking_right]
 x = 300
+xmin = 0
+xmax = root.winfo_screenwidth()
 ind = 0
 moving = False
 y = root.winfo_screenheight()-150
@@ -99,13 +101,16 @@ def move():
     global td
     global floor_y
     global y
+    global xmax
+    global xmin
     if(not moving):
      ib+=1
      
      if(dist > 1 or y < floor_y):
          x += 0
      else:
-         x += dist
+         if(not(x > xmax) and not(x < 0)):
+            x += dist
      root.geometry(f"+{str(x)}+{str(y)}")
      if(ib>itr):
          frames = tb[0]
