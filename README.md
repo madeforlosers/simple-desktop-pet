@@ -1,5 +1,8 @@
 # simple-desktop-pet
 
+please keep in mind this is very buggy still and very much a demo
+
+
 ## what you need:
 
 1. python (https://www.python.org/)
@@ -26,3 +29,7 @@ you need 4 different GIF files, all 100x100 pixels. if you're too lazy to make G
 4. sleep / idle2 (sleep.gif)
 
 replace the default images with your own and bam. you did it good job
+
+## okay but how do I close the program i dont like using task manager every time
+
+right click the little guy and press the "bye bye little guy" option. you're welcome
