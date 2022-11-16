@@ -8,11 +8,10 @@ root = Tk()
 frm = ttk.Frame(root, padding=10)
 
 #frm.grid()
-fileurl = "C:\\Users\\james\\source\\repos\\desktop buddy\\desktop buddy\\"
+fileurl = ""
 frames = [PhotoImage(file=fileurl+"idle.gif",format = 'gif -index %i' %(i)) for i in range(5)]
 walking_left = [PhotoImage(file=fileurl+"walking_negative.gif",format = 'gif -index %i' %(i)) for i in range(8)]
 walking_right = [PhotoImage(file=fileurl+"walking_positive.gif",format = 'gif -index %i' %(i)) for i in range(8)]
-idle_to_sleep = [PhotoImage(file=fileurl+"idle_to_sleep.gif",format = 'gif -index %i' %(i)) for i in range(8)]
 idle = [PhotoImage(file=fileurl+"idle.gif",format = 'gif -index %i' %(i)) for i in range(5)]
 sleep = [PhotoImage(file=fileurl+"sleep.gif",format = 'gif -index %i' %(i)) for i in range(3)]
 tb = [idle, walking_left,sleep, walking_right]
