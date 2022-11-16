@@ -17,7 +17,10 @@ pip install pathlib
 ```
 *!! if it gives you an error saying it doesn't exist, just run the program. it will probably already work without you needing to install it*
 
-2. run the program in your console or in file explorer, both works.
+2. run the program in your console.
+```py
+python desktop_buddy.pyw
+```
 
 
 ## how to make your own sprites
