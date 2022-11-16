@@ -1,4 +1,4 @@
-# simple-desktop-pet (v0.2.3-alpha)
+# simple-desktop-pet (v0.2.4-alpha)
 
 please keep in mind this is very buggy still and very much a demo
 
