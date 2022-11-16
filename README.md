@@ -40,3 +40,18 @@ replace the default images with your own and bam. you did it good job
 ## okay but how do I close the program i dont like using task manager every time
 
 right click the little guy and press the "bye bye little guy" option. you're welcome
+
+## release notes
+
+### v0.1.0-alpha
+made the program
+### v0.1.1-alpha
+i forgot lol
+### v0.2.0-alpha
+made the pet be able to be dragged and added more animations (falling and grabbed)
+### v0.2.1-alpha
+minor fix
+### v0.2.2-alpha
+made it not able to go off screen (hopefully)
+### v0.2.3-alpha
+i dunno
