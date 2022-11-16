@@ -9,11 +9,13 @@ please keep in mind this is very buggy still and very much a demo
 
 ## steps
 
-1. install tkinter.
+1. install tkinter and pathlib.
 
 ```py
 pip install tkinter
+pip install pathlib
 ```
+*!! if it gives you an error saying it doesn't exist, just run the program. it will probably already work without you needing to install it*
 
 2. run the program in your console or in file explorer, both works.
 
