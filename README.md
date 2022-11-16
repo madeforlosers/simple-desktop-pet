@@ -2,9 +2,6 @@
 
 please keep in mind this is very buggy still and very much a demo
 
-**THE SOURCES IN RELEASES ARE NOT UP TO DATE ANYMORE PLEASE DOWNLOAD SOURCE FROM HERE**
-
-
 ## what you need:
 
 1. python (https://www.python.org/)
