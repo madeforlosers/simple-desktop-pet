@@ -78,8 +78,6 @@ def moveAround():
     global td
     global ind
     if(not moving):
-     frames = tb[0]
-     ind = 0
      dist = random.randint(-1,2)
      frames = tb[dist]
      ind = 0
