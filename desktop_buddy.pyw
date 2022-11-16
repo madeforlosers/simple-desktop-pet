@@ -19,7 +19,7 @@ falling = [PhotoImage(file=fileurl+"falling.gif",format = 'gif -index %i' %(i)) 
 tb = [idle, walking_left,sleep, walking_right]
 x = 300
 xmin = 0
-xmax = root.winfo_screenwidth()
+xmax = root.winfo_screenwidth()-100
 ind = 0
 moving = False
 y = root.winfo_screenheight()-150
@@ -109,7 +109,7 @@ def move():
      if(dist > 1 or y < floor_y):
          x += 0
      else:
-         if(not(x > xmax) and not(x < 0)):
+         if(x < xmax and x > 0):
             x += dist
      root.geometry(f"+{str(x)}+{str(y)}")
      if(ib>itr):
