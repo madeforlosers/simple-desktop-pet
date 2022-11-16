@@ -59,3 +59,5 @@ made it not able to go off screen (hopefully)
 i dunno
 ### v0.2.4-alpha
 made it stay at the top and fixed a bug
+### v0.2.41-alpha
+fixed a bug that made the window have no transparency
