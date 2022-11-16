@@ -27,6 +27,11 @@ you need 4 different GIF files, all 100x100 pixels. if you're too lazy to make G
 2. walking left (walking_positive.gif)
 3. idle (idle.gif)
 4. sleep / idle2 (sleep.gif)
+5. falling (falling.gif)\*
+6. grabbed (grabbed.gif)\*
+
+*\*please replace default image with something else, these are also the default walking animations because I didnt have a falling/grabbed animation to use*
+
 
 replace the default images with your own and bam. you did it good job
 
