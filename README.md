@@ -57,3 +57,5 @@ minor fix
 made it not able to go off screen (hopefully)
 ### v0.2.3-alpha
 i dunno
+### v0.2.4-alpha
+made it stay at the top and fixed a bug
