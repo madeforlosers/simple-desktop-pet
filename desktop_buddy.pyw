@@ -1,21 +1,26 @@
 from tkinter import *
 from tkinter import ttk
+import pathlib
 import random
 ib = 0
 itr = 0
 dist = 0
 root = Tk()
 frm = ttk.Frame(root, padding=10)
-
+def t(path):
+  try:
+    tv =  str(pathlib.Path().resolve())+"\\"+path
+  finally:
+    tv = str(pathlib.Path().resolve())+"/"+path
+  return tv
 #frm.grid()
-fileurl = ""
-frames = [PhotoImage(file=fileurl+"idle.gif",format = 'gif -index %i' %(i)) for i in range(5)]
-walking_left = [PhotoImage(file=fileurl+"walking_negative.gif",format = 'gif -index %i' %(i)) for i in range(8)]
-walking_right = [PhotoImage(file=fileurl+"walking_positive.gif",format = 'gif -index %i' %(i)) for i in range(8)]
-idle = [PhotoImage(file=fileurl+"idle.gif",format = 'gif -index %i' %(i)) for i in range(5)]
-sleep = [PhotoImage(file=fileurl+"sleep.gif",format = 'gif -index %i' %(i)) for i in range(3)]
-grabbed = [PhotoImage(file=fileurl+"grabbed.gif",format = 'gif -index %i' %(i)) for i in range(3)]
-falling = [PhotoImage(file=fileurl+"falling.gif",format = 'gif -index %i' %(i)) for i in range(3)]
+frames = [PhotoImage(file=t("idle.gif"),format = 'gif -index %i' %(i)) for i in range(5)]
+walking_left = [PhotoImage(file=t("walking_negative.gif"),format = 'gif -index %i' %(i)) for i in range(8)]
+walking_right = [PhotoImage(file=t("walking_positive.gif"),format = 'gif -index %i' %(i)) for i in range(8)]
+idle = [PhotoImage(file=t("idle.gif"),format = 'gif -index %i' %(i)) for i in range(5)]
+sleep = [PhotoImage(file=t("sleep.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
+grabbed = [PhotoImage(file=t("grabbed.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
+falling = [PhotoImage(file=t("falling.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
 tb = [idle, walking_left,sleep, walking_right]
 x = 300
 xmin = 0
@@ -34,7 +39,7 @@ def update():
     ind += 1
     if ind >= len(frames):
         #if(dist == 2):
-        #    frames = [PhotoImage(file=fileurl+"sleep.gif",format = 'gif -index %i' %(i)) for i in range(3)]
+        #    frames = [PhotoImage(file=t("sleep.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
         ind = 0
     label.configure(image=frame)
     root.after(400, update)
@@ -42,7 +47,7 @@ label = Label(root,bd=0,bg='black')
 label.pack()
 root.after(0, update)
 def stay_on_top():
-   root.lift()
+   root.call('wm', 'attributes', '.', '-topmost', '1')
    root.after(1, stay_on_top)
 root.overrideredirect(True)
 #root.wm_attributes('-transparentcolor','black')
