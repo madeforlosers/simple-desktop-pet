@@ -50,7 +50,7 @@ def stay_on_top():
    root.call('wm', 'attributes', '.', '-topmost', '1')
    root.after(1, stay_on_top)
 root.overrideredirect(True)
-root.wm_attributes('-transparentcolor','black')
+#root.wm_attributes('-transparentcolor','black')
 root.config(highlightbackground='black')
 t = str(root.winfo_screenheight()-150)
 
@@ -84,10 +84,11 @@ def moveAround():
     global frames
     global td
     global ind
+    dist = 0
     if(not moving):
+    
      dist = random.randint(-1,2)
-     frames = tb[dist]
-     ind = 0
+     
      ib = 0
      itr = random.randint(100,500)
      frames = tb[dist]
@@ -109,6 +110,7 @@ def move():
     global xmax
     global xmin
     if(not moving):
+      
      ib+=1
      
      if(dist > 1 or y < floor_y):
@@ -145,7 +147,7 @@ def fall():
       root.geometry(f"+{str(x)}+{str(y)}")
       root.after(10,fall)
   else:
-    root.after(10, reset)
+    reset()
     
 m = Menu(root, tearoff=0)
 
@@ -160,7 +162,6 @@ root.bind("<Button-3>", do_popup)
 
 
 fall()
-
 moveAround()
 stay_on_top()
 root.mainloop()
