@@ -50,7 +50,7 @@ def stay_on_top():
    root.call('wm', 'attributes', '.', '-topmost', '1')
    root.after(1, stay_on_top)
 root.overrideredirect(True)
-#root.wm_attributes('-transparentcolor','black')
+root.wm_attributes('-transparentcolor','black')
 root.config(highlightbackground='black')
 t = str(root.winfo_screenheight()-150)
 
