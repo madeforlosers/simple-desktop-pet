@@ -1,4 +1,4 @@
-# simple-desktop-pet (v0.2.5-alpha)
+# simple-desktop-pet (v0.2.6-alpha)
 
 please keep in mind this is very buggy still and very much a demo
 
@@ -63,3 +63,5 @@ made it stay at the top and fixed a bug
 fixed a bug that made the window have no transparency
 ### v0.2.5-alpha
 fixed a bug
+### v0.2.6-alpha
+fixed bugs and added some comments
