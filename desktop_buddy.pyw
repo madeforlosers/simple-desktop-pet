@@ -7,13 +7,19 @@ itr = 0
 dist = 0
 root = Tk()
 frm = ttk.Frame(root, padding=10)
-def t(path):
+
+
+def t(path): 
+  # im going to be honest I have NO IDEA what
+  # this does
   try:
     tv =  str(pathlib.Path().resolve())+"\\"+path
   finally:
     tv = str(pathlib.Path().resolve())+"/"+path
   return tv
 #frm.grid()
+
+# set all the frames for easy access
 frames = [PhotoImage(file=t("idle.gif"),format = 'gif -index %i' %(i)) for i in range(5)]
 walking_left = [PhotoImage(file=t("walking_negative.gif"),format = 'gif -index %i' %(i)) for i in range(8)]
 walking_right = [PhotoImage(file=t("walking_positive.gif"),format = 'gif -index %i' %(i)) for i in range(8)]
@@ -21,6 +27,8 @@ idle = [PhotoImage(file=t("idle.gif"),format = 'gif -index %i' %(i)) for i in ra
 sleep = [PhotoImage(file=t("sleep.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
 grabbed = [PhotoImage(file=t("grabbed.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
 falling = [PhotoImage(file=t("falling.gif"),format = 'gif -index %i' %(i)) for i in range(3)]
+
+#added it in list to make it even easier
 tb = [idle, walking_left,sleep, walking_right]
 x = 300
 xmin = 0
@@ -29,6 +37,8 @@ ind = 0
 moving = False
 y = root.winfo_screenheight()-150
 floor_y = root.winfo_screenheight()-150
+
+#update function fo fix things
 def update():
     global ind
     global dist
@@ -50,7 +60,13 @@ def stay_on_top():
    root.call('wm', 'attributes', '.', '-topmost', '1')
    root.after(1, stay_on_top)
 root.overrideredirect(True)
-root.wm_attributes('-transparentcolor','black')
+
+try: #put this in like this because this doesnt work in the replit output view for some reason?
+  root.wm_attributes('-transparentcolor','black')
+except:
+  "keeping this from erroring is this string"
+
+  
 root.config(highlightbackground='black')
 t = str(root.winfo_screenheight()-150)
 
