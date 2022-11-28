@@ -43,6 +43,10 @@ replace the default images with your own and bam. you did it good job
 
 right click the little guy and press the "bye bye little guy" option. you're welcome
 
+## credits
+
+TheNobody - the default cat images ([youtube](https://www.youtube.com/@thenobody3717/)) (check them out they deserve more subs)
+
 ## release notes
 
 ### v0.1.0-alpha
