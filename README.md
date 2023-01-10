@@ -19,7 +19,7 @@ pip install pathlib
 
 2. run the program in your console.
 ```py
-python desktop_buddy.pyw
+pythonw desktop_buddy.pyw
 ```
 
 
